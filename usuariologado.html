@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOXIE</title>
+    <link rel="stylesheet" href="css/usuariologado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Preload -->
+    <link rel="preload" as="image" href="img/banner1.png">
+
+    <!-- Link do Font Awesome (ícones das redes sociais) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <div class="barra-promocao">
+            <div class="container-promocao">
+                <ul class="barra-promocao-lista">
+                    <li><a href="#">TROCA FÁCIL</a></li>
+                    <li><a href="#">FRETE GRÁTIS A PARTIR DE R$150</a></li>
+            </ul>
+            </div>
+
+        </div>
+        
+    </nav>
+    
+    <header class="header">
+        <div class="container">
+            <!-- Menu Hambúrguer -->
+            <label for="menu-toggle" class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </label>
+            <input type="checkbox" id="menu-toggle" />
+            <nav class="menu">
+                <ul>
+                    <li><a href="feminino.html">Feminino</a></li>
+                    <li><a href="masculino.html">Masculino</a></li>
+                    <li><a href="cental-ajuda.html">Central de Ajuda</a></li>
+                </ul>
+            </nav>
+
+            <!-- Título -->
+            <h1 class="h1-titulo">
+                <a href="index.html" aria-label="Voltar para a página inicial">MOXIE</a>
+            </h1>
+    
+            <!-- Categorias -->
+            <nav class="header-categories">
+                <ul>
+                    <li><a href="feminino.html">Feminino</a></li>
+                    <li><a href="masculino.html">Masculino</a></li>
+                    <li><a href="#">Acessorios</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Botões estilizados -->
+            <div class="header-buttons">
+                <!-- Botão de pesquisa -->
+                <div class="search-container">
+                    <!-- Checkbox para controlar a exibição -->
+                    <input type="checkbox" id="search-toggle" class="search-toggle" />
+                    
+                    <!-- Botão da lupa -->
+                    <label for="search-toggle" class="icon-button search-icon">
+                        <i class='bx bx-search'></i>
+                    </label>
+                    
+                    <!-- Caixa de pesquisa -->
+                    <div class="search-box">
+                        <label for="search-toggle" class="close-search" aria-label="Fechar Pesquisa">
+                            <i class='bx bx-x'></i>
+                        </label>
+                        <input type="text" placeholder="Digite sua busca..." />
+                        <button type="submit">Buscar</button>
+                    </div>
+                </div>
+
+                <!-- Botão de Carrinho -->
+                <a href="carrinho.html" aria-label="Ir para a página do carrinho" class="icon-button">
+                    <i class='bx bx-cart'></i>
+                </a>
+    
+                <!-- Botão de Login -->
+                    <div class="user-container dropdown">
+                        <a href="#" aria-label="User Login Button" class="icon-button user-icon" onclick="toggleDropdown(event)">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    
+                        <div id="dropdownContent" class="dropdown-content">
+                            <div class="user-info">
+                                <p id="userNameDisplay"><strong>Nome:</strong></p>
+                                <p id="userEmailDisplay"><strong>Email:</strong></p>
+                                <p id="lastOrderDisplay"><strong>Último pedido:</strong></p>
+                                <p id="favoritesDisplay"><strong>Favoritos:</strong></p>
+                                <p id="savedCardsDisplay"><strong>Cartões Salvos:</strong></p>
+                                <p id="addressDisplay"><strong>Endereço:</strong></p>
+                            </div>
+                            <hr>
+                            <a href="#">Meus Pedidos</a>
+                            <a href="#">Favoritos</a>
+                            <a href="#">Métodos de Pagamento</a>
+                            <a href="#">Endereços</a>
+                            <button onclick="logout()" class="logout-btn">Sair da Conta</button>
+                            <button onclick="deleteProfile()" class="delete-btn">Deletar Perfil</button>
+                        </div>
+                      </div>            
+                  
+
+                <!-- Botão de Ajuda -->
+                <a href="cental-ajuda.html" aria-label="Help Button" class="icon-button">
+                    <i class='bx bx-help-circle'></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner" style="background-image: url('img/banner1.png')">
+    </section>
+
+
+    <!-- Produtos -->
+    <section class="produtos">
+        <h2>Mais vendidos na semana</h2>
+            <div class="grid">
+            <!-- Os produtos serão renderizados aqui -->
+        </div>
+    </section>
+
+    <section class="carrinho">
+        
+        <ul class="carrinho-itens">
+            <!-- Os itens do carrinho serão renderizados aqui -->
+        </ul>
+    </section>
+
+    <!-- Sobre -->
+    <section class="sobre">
+        <h2>Sobre a MOXIE</h2>
+        <p>A Moxie é para quem vive com atitude e quer que isso se reflita em cada detalhe — inclusive nas roupas de treino. Com o lema "When you've got moxie, you need your clothes to match", reunimos peças que unem estilo, conforto e performance. Porque sua força merece acompanhar seu ritmo.</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Redes Sociais -->
+            <div class="footer-section">
+                <h3>REDES SOCIAIS</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/?lang=pt"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://youtu.be/ac4redj6jnc?si=RE2ldETENMmlMkH_"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/?locale=pt_BR"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <p class="footer-contact">ATENDIMENTO <br> 0800-999-2121</p>
+            </div>
+
+            <!-- Dúvidas -->
+            <div class="footer-section">
+                <h3>DÚVIDAS</h3>
+                <ul>
+                    <li><a href="Politica_de_Priv.html">Política de Privacidade e Segurança de Dados</a></li>
+                    <li><a href="termosUso.html">Termo e Condições de Uso da MOXIE</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="cental-ajuda.html">Ajuda/FAQ</a></li>
+                    <li><a href="solicitarTroca.html">Solicitar troca/devolução</a></li>
+                </ul>
+            </div>
+
+            
+            <!-- Formas de Pagamento -->
+            <div class="footer-section">
+                <h3>FORMAS DE PAGAMENTO</h3>
+                <div class="payment-icons">
+                    <img src="img/pix.svg" alt="Pix">
+                    <img src="img/download.svg" alt="Mastercard">
+                    <img src="img/american.svg" alt="American Express">
+                    <img src="img/visa.svg" alt="Visa">
+                </div>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 MOXIE Inc. - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/teste.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Cadastro</title>
-  <link rel="stylesheet" href="css/cadastro.css" />
+  <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
   <div class="container-login-cadastro">
     <div class="login-box">
       <div class="form">
         <div class="header">Cadastro</div>
+
+        <input type="text" class="input" id="username" placeholder="Nome Completo" required>
         <input type="email" class="input" id="email" placeholder="Email" required>
         <input type="password" class="input" id="password" placeholder="Senha" required>
+        <input type="text" class="input" id="card" placeholder="Cartão (Ex: Visa **** 1234)" required>
+        <input type="text" class="input" id="address" placeholder="Endereço" required>
+
         <button class="button" onclick="register()">Cadastrar</button>
         <a class="sign-in" href="login.html">Já tem conta? Login</a>
       </div>
@@ -21,3 +26,5 @@
   <script src="js/registro.js"></script>
 </body>
 </html>
+
+

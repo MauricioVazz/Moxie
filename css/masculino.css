@@ -120,7 +120,7 @@ header h1 {
 }
 
 .h1-titulo a:hover {
-    color: rgba(46, 142, 255, 0.7); /* Cor ao passar o mouse */
+    color: var(--preto); /* Cor ao passar o mouse */
 }
 
 /* Nav promoções */
@@ -163,7 +163,7 @@ header h1 {
 }
 
 .header-categories ul li a:hover {
-    color: rgba(46, 142, 255, 0.7); /* Cor de destaque ao passar o mouse */
+    color: var(--preto); /* Cor de destaque ao passar o mouse */
 }
 
 /* Botões do Header */
@@ -189,7 +189,7 @@ header h1 {
 
 .icon-button:hover {
     transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-    color: rgba(46, 142, 255, 0.7); /* Cor ao passar o mouse */
+    color: var(--preto); 
 }
 
 .icon-button:focus {
@@ -228,7 +228,7 @@ header h1 {
 
 .search-icon:hover {
     transform: scale(1.1);
-    color: rgba(46, 142, 255, 0.7);
+    color: var(--preto);
 }
 
 /* Caixa de pesquisa */
@@ -264,7 +264,7 @@ header h1 {
 
 /* Botão de busca */
 .search-box button[type="submit"] {
-    background-color: var(--preto);
+    background-color: #4169e1;
     color: var(--branco);
     border: none;
     padding: 10px 20px;
@@ -275,7 +275,7 @@ header h1 {
 }
 
 .search-box button[type="submit"]:hover {
-    background-color: #c0a7cc;
+    background-color: rgb(104, 151, 255);
 }
 
 /* Botão de fechar (X) */
@@ -427,7 +427,7 @@ header h1 {
 }
 
 .produto button {
-    background:rgb(104, 151, 255);
+    background: var(--azul-masc);
     color: white;
     border: none;
     padding: 10px;
@@ -439,7 +439,7 @@ header h1 {
 }
 
 .produto button:hover {
-    background:rgb(70, 128, 255);
+    background: rgb(104, 151, 255);;
 }
 
 /* Sobre */
@@ -519,70 +519,6 @@ footer {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Estilo para os itens dentro da categoria */
-.itens-categoria {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid responsivo */
-}
-
-/* Estilo para cada item dentro da categoria */
-.itens-categoria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Cada item ocupa 50% da largura da tela */
-}
-
-/* Estilo para cada item dentro da categoria */
-.item {
-    height: 279px;
-}
-
-.item-1 {
-    background-image: url('../img/feminino.png');
-    background-size: cover; /* Ajusta para cobrir todo o elemento */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    height: 100%;
-    border: 2px solid transparent; /* Borda inicial transparente */
-  transition: border-color 0.3s ease; /* Transição suave para o efeito */
-}
-
-.item-1:hover {
-    border-color: #B096BC; /* Cor da borda ao passar o mouse */
-  }
-
-.item-2 {
-    background-image: url('../img/masculino.png');
-    background-size: cover; /* Ajusta para cobrir todo o elemento */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    height: 100%;
-    border: 2px solid transparent; /* Borda inicial transparente */
-  transition: border-color 0.3s ease; /* Transição suave para o efeito */
-}
-
-.item-2:hover {
-    border-color: #B096BC; /* Cor da borda ao passar o mouse */
-  }
-
-/* Título de cada item */
-.titulo-item {
-    font-family: var(--ff-poppins);
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--branco);
-    text-align: right;
-    padding: 5px;
-    margin-right: 20px;
-    margin-top: 160px; /* Espaçamento abaixo do título */
-    transition: color 0.3s;
-}
-
-.titulo-item.feminino:hover {
-    color: #c0a7cc;
-}
-
-.titulo-item.masculino:hover {
-    color: #c0a7cc;
-}
-
 .categoria-masculino {
     background-color: var(--azul-masc);
     width: 100%;
@@ -597,22 +533,7 @@ footer {
     font-weight: bold;
     color: var(--branco);
     text-align: center;
-}
-
-.categoria-feminino {
-    background-color: var(--rosa-fem);
-    width: 100%;
-    height: 140px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.categoria-feminino h2 {
-    font-family: var(--ff-poppins);
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--branco);
-    text-align: center;
+    padding: 50px;
 }
 
 /* Rodapé */

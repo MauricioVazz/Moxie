@@ -120,7 +120,7 @@ header h1 {
 }
 
 .h1-titulo a:hover {
-    color: #6A5ACD; /* Cor ao passar o mouse */
+    color: var(--rosa-fem); /* Cor ao passar o mouse */
 }
 
 /* Nav promoções */
@@ -163,7 +163,7 @@ header h1 {
 }
 
 .header-categories ul li a:hover {
-    color: #6A5ACD; /* Cor de destaque ao passar o mouse */
+    color: var(--rosa-fem); /* Cor de destaque ao passar o mouse */
 }
 
 /* Botões do Header */
@@ -190,11 +190,11 @@ header h1 {
 
 .icon-button:hover {
     transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-    color: #6A5ACD; /* Cor ao passar o mouse */
+    color: var(--rosa-fem); /* Cor ao passar o mouse */
 }
 
 .icon-button:focus {
-    outline: 2px solid #6A5ACD; /* Destaque ao focar */
+    outline: 2px solid var(--rosa-fem); /* Destaque ao focar */
     outline-offset: 2px;
 }
 
@@ -205,7 +205,7 @@ header h1 {
 
 /* Adiciona um estilo de foco personalizado (opcional) */
 .icon-button:focus-visible {
-    outline: 2px solid #6A5ACD; /* Destaque ao focar */
+    outline: 2px solid var(--rosa-fem); /* Destaque ao focar */
     outline-offset: 2px;
 }
 
@@ -229,7 +229,7 @@ header h1 {
 
 .search-icon:hover {
     transform: scale(1.1);
-    color: #6A5ACD;
+    color: var(--rosa-fem);
 }
 
 /* Caixa de pesquisa */

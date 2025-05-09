@@ -1,0 +1,816 @@
+:root {
+    /* Cores */
+    --preto: #000;
+    --azul-masc: #9698BC;
+    --rosa-fem: #B096BC;
+    --branco: #FFF;
+    --cinza-pers: #D9D9D9;
+
+    /* Fontes */
+    --ff-poppins: "Poppins", sans-serif;
+    --ff-OST: "Old Standard TT", serif;
+}
+
+/* Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+/* Nav promocoes */
+.barra-promocao {
+    background-color: var(--cinza-pers);
+    padding: 5px;
+    height: 25px;
+}
+
+@keyframes rolar {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.container-promocao {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.barra-promocao-lista {
+    text-align: right;
+    display: flex;
+    font-family: var(--ff-poppins);
+    font-weight: 600;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    white-space: nowrap; /* Impede quebra de linha */
+    animation: rolar 20s linear infinite; /* Define a animação */
+    overflow: hidden; /* Oculta o texto ao ultrapassar a área visível */
+}
+
+.barra-promocao-lista li a {
+    text-decoration: none;
+    color: var(--preto);
+}
+
+/* Header */
+
+.header-bar {
+    background-color: var(--rosa-fem);
+    height: 50px;
+}
+
+header {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 10px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    height: auto;
+    gap: 20px;
+}
+
+/* Título */
+header h1 {
+    font-size: 29px;
+    font-weight: lighter;
+    font-family: var(--ff-OST);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(224, 187, 152);
+}
+
+header h1 {
+    font-size: 29px;
+    font-weight: lighter;
+    font-family: var(--ff-OST);
+}
+
+/* Estilo do título no header */
+.h1-titulo a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: var(--branco); /* Cor do texto */
+    transition: color 0.3s ease;
+}
+
+.h1-titulo a:hover {
+    color: var(--rosa-fem); /* Cor ao passar o mouse */
+}
+
+/* Nav promoções */
+.barra-promocao {
+    background-color: var(--cinza-pers);
+    padding: 5px;
+    height: 25px;
+    overflow: hidden; /* Garante que o conteúdo extra não afete o tamanho da página */
+}
+
+.barra-promocao-lista {
+    text-align: right;
+    display: flex;
+    font-family: var(--ff-poppins);
+    font-weight: 600;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    white-space: nowrap; /* Impede quebra de linha */
+    animation: rolar 20s linear infinite; /* Define a animação */
+    overflow: hidden; /* Oculta o texto que ultrapassa os limites */
+}
+
+/* Categorias no Header */
+.header-categories ul {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-categories ul li a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-categories ul li a:hover {
+    color: var(--rosa-fem); /* Cor de destaque ao passar o mouse */
+}
+
+/* Botões do Header */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+
+/* Botão com apenas o ícone */
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Tamanho do ícone */
+    color: var(--branco); /* Cor do ícone */
+    text-decoration: none; /* Remove o sublinhado do link */
+    background: none; /* Remove o fundo padrão */
+    border: none; /* Remove bordas */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon-button:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    color: var(--rosa-fem); /* Cor ao passar o mouse */
+}
+
+.icon-button:focus {
+    outline: 2px solid var(--rosa-fem); /* Destaque ao focar */
+    outline-offset: 2px;
+}
+
+/* Remove a borda padrão ao focar nos botões do header */
+.icon-button:focus {
+    outline: none; /* Remove o estilo de foco padrão */
+}
+
+/* Adiciona um estilo de foco personalizado (opcional) */
+.icon-button:focus-visible {
+    outline: 2px solid var(--rosa-fem); /* Destaque ao focar */
+    outline-offset: 2px;
+}
+
+/* Estilo do container de busca */
+.search-container {
+    position: relative;
+}
+
+/* Checkbox invisível para controlar a exibição */
+.search-toggle {
+    display: none;
+}
+
+/* Ícone da lupa */
+.search-icon {
+    font-size: 24px;
+    color: var(--branco);
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.search-icon:hover {
+    transform: scale(1.1);
+    color: var(--rosa-fem);
+}
+
+/* Caixa de pesquisa */
+.search-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Altura do header */
+    background-color: var(--branco);
+    display: none; /* Oculta por padrão */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Exibe a caixa de pesquisa quando o checkbox está marcado */
+.search-toggle:checked ~ .search-box {
+    display: flex;
+}
+
+/* Campo de entrada de busca */
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Botão de busca */
+.search-box button[type="submit"] {
+    background-color: var(--preto);
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button[type="submit"]:hover {
+    background-color: #727272;
+}
+
+/* Botão de fechar (X) */
+.close-search {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--preto);
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-search:hover {
+    transform: scale(1.1);
+    color: #727272;
+}
+
+/* Input para controlar o menu */
+#menu-toggle {
+    display: none; /* Oculta o input */
+}
+
+/* Menu popup oculto por padrão */
+.menu {
+    display: none; /* Oculta o menu por padrão */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    gap: 10px;
+    background-color: var(--preto); /* Cor de fundo do menu */
+    padding: 10px;
+    position: absolute;
+    top: 60px; /* Ajusta a posição abaixo do header */
+    right: 20px; /* Alinha à direita */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Exibe o menu quando o checkbox está marcado */
+.menu-icon {
+    display: none; /* Oculta o ícone em telas maiores */
+    font-size: 24px;
+    color: var(--branco);
+    cursor: pointer;
+}
+
+#menu-toggle:checked + .menu {
+    display: none;
+}
+
+/* Itens do menu */
+.menu ul {
+    list-style: none;
+    color: var(--branco);
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #6A5ACD; /* Cor ao passar o mouse */
+}
+
+.container-produtos{
+    margin: 0 ;
+    padding: 0 auto;
+    min-height: 600px;
+    background-image: url('../img/parallax.png');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* Banner */
+.banner {
+    background: url('img/banner1.png') no-repeat center;
+    background-size: cover;
+    height: 700px; /* Altura padrão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Produtos */
+.produtos {
+    font-family: var(--ff-poppins);
+    text-align: center;
+    padding: 50px 0;
+    background: #f4f4f4;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    justify-content: space-between; /* Garante que os elementos sejam distribuídos */
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o restante */
+}
+
+.produto h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.produto p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px; /* Espaçamento entre a descrição e o botão */
+    flex-grow: 1; /* Faz a descrição ocupar o espaço disponível */
+}
+
+.produto .preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Espaçamento entre o preço e o botão */
+}
+
+.produto button {
+    background: var(--preto);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%; /* Faz o botão ocupar toda a largura do card */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    align-self: center; /* Centraliza o botão horizontalmente */
+}
+
+.produto button:hover {
+    background: #727272;
+}
+
+/* Sobre */
+.sobre {
+    text-align: center;
+    padding: 40px 20px;
+    background: #ddd;
+}
+
+.sobre h2 {
+    font-size: 24px;
+    font-weight: bold; 
+}
+
+.sobre p {
+    font-size: 16px;
+    color: #000000;
+    margin-top: 10px;
+    font-weight: 600; 
+}
+
+/* Rodapé */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.payment-icons img {
+    width: 50px;  
+    height: auto;  
+    object-fit: contain;  /* Garante que a imagem não fique distorcida */
+    transition: transform 0.3s ease;
+}
+
+.payment-icons img:hover {
+    transform: scale(1.1); 
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 280px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #ddd;
+}
+
+/* Redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+    transform: scale(1.2);
+}
+
+/* Ícones de pagamento */
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+/* Contato */
+.footer-contact {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Texto de direitos autorais */
+.footer-copy {
+    margin-top: 30px;
+    font-size: 13px;
+    border-top: 1px solid white;
+    padding-top: 15px;
+    opacity: 0.7;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .payment-icons {
+        justify-content: center;
+    }
+}
+
+/* mais vendidos*/
+.btn-maisvendidos{
+    background-color:rgb(99, 109, 151);
+    color: #FFF;
+    text-decoration: none;
+    margin:0px 20px ;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 28px;
+    max-width: 100%;
+}
+
+.caixa-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.cards{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 18%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+.cards:hover{
+    border: 1px solid #9698BC;
+    box-shadow: 0 4px 8px 0 #9698BC;
+    transform: scale(1.04);
+    transition: all 0.1s ease-in;
+  }
+
+  .caixinha {
+    padding: 16px;
+    font-family: 'Comfortaa', cursive;
+    
+  }
+
+  /* Estilo geral da categoria de conteúdo */
+.categoria-conteudo {
+    cursor: pointer;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para os itens dentro da categoria */
+.itens-categoria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid responsivo */
+}
+
+/* Estilo para cada item dentro da categoria */
+.itens-categoria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cada item ocupa 50% da largura da tela */
+}
+
+/* Estilo para cada item dentro da categoria */
+.item {
+    height: 279px;
+}
+
+.item-1 {
+    background-image: url('../img/feminino.png');
+    background-size: cover; /* Ajusta para cobrir todo o elemento */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 100%;
+    border: 2px solid transparent; /* Borda inicial transparente */
+  transition: border-color 0.3s ease; /* Transição suave para o efeito */
+}
+
+.item-1:hover {
+    border-color: #B096BC; /* Cor da borda ao passar o mouse */
+  }
+
+.item-2 {
+    background-image: url('../img/masculino.png');
+    background-size: cover; /* Ajusta para cobrir todo o elemento */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 100%;
+    border: 2px solid transparent; /* Borda inicial transparente */
+  transition: border-color 0.3s ease; /* Transição suave para o efeito */
+}
+
+.item-2:hover {
+    border-color: #B096BC; /* Cor da borda ao passar o mouse */
+  }
+
+/* Título de cada item */
+.titulo-item {
+    font-family: var(--ff-poppins);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--branco);
+    text-align: right;
+    padding: 5px;
+    margin-right: 20px;
+    margin-top: 160px; /* Espaçamento abaixo do título */
+    transition: color 0.3s;
+}
+
+.titulo-item.feminino:hover {
+    color: #c0a7cc;
+}
+
+.titulo-item.masculino:hover {
+    color: #c0a7cc;
+}
+
+.categoria-masculino {
+    background-color: var(--azul-masc);
+    width: 100%;
+    height: 140px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.categoria-masculino h2 {
+    font-family: var(--ff-poppins);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--branco);
+    text-align: center;
+}
+
+.categoria-feminino {
+    background-color: var(--rosa-fem);
+    width: 100%;
+    height: 140px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.categoria-feminino h2 {
+    font-family: var(--ff-poppins);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--branco);
+    text-align: center;
+}
+
+.user-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Ajustando o dropdown para aparecer no clique */
+.dropdown-content {
+    display: none; /* Mantém oculto inicialmente */
+    position: absolute;
+    right: 0; /* Ajusta posição para alinhar com ícone */
+    background-color: var(--preto);
+    min-width: 220px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000; /* Garante que o dropdown fique acima de outros elementos */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+}
+
+/* Ajusta espaçamento do texto do usuário */
+.user-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: var(--branco);
+}
+
+.logout-btn {
+    background-color: #ff9800; /* Cor laranja para destacar */
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: #e68900;
+}
+
+/* Estilização do botão de exclusão */
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--branco); /* Cor do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+  

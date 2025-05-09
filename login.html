@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Login</title>
-  <link rel="stylesheet" href="css/login.css" /> <!-- Updated to match the correct file -->
+  <link rel="stylesheet" href="css/login.css" />
 </head>
 <body>
   <div class="container-login">
@@ -12,12 +12,16 @@
         <div class="header">Login</div>
         <input type="email" class="input" id="email" placeholder="Email" required>
         <input type="password" class="input" id="password" placeholder="Senha" required>
+
+        <a href="#" class="forgot-password" onclick="resetPassword()">Esqueceu a senha?</a> <!-- Novo botão -->
         <button class="button" onclick="login()">Entrar</button>
         <a class="sign-in" href="cadastro.html">Não tem conta? Cadastre-se</a>
       </div>
     </div>
   </div>
 
-  <script src="js/TTeste.js"></script>
+  <script src="js/TTeste.js"></script> <!-- Confirme que este é seu arquivo correto -->
+  <script src="js/resetPassword.js"></script> <!-- Adicionando o script de redefinição -->
 </body>
 </html>
+
